@@ -3,7 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRepairShop", "CarRepairShop\CarRepairShop.csproj", "{59651A2B-2304-453C-B67E-91EF8353B196}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRepairShop", "CarRepairShop\CarRepairShop.csproj", "{59651A2B-2304-453C-B67E-91EF8353B196}"
+	ProjectSection(ProjectDependencies) = postProject
+		{853143CB-5B00-49BC-ADF2-557269EB2235} = {853143CB-5B00-49BC-ADF2-557269EB2235}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRepairShopDataModels", "CarRepairShopDataModels\CarRepairShopDataModels.csproj", "{85B7EA38-8F19-4199-B83A-B3128A145E3F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRepairShopBisinessLogic", "CarRepairShopBisinessLogic\CarRepairShopBisinessLogic.csproj", "{853143CB-5B00-49BC-ADF2-557269EB2235}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRepairShopContracts", "CarRepairShopContracts\CarRepairShopContracts.csproj", "{CE6A6A6F-A0D3-428F-B70F-E73695DD2C91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRepairShopListImplement", "CarRepairShopListImplement\CarRepairShopListImplement.csproj", "{7A19A758-A68B-4B08-8F70-62D42A777926}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +26,22 @@ Global
 		{59651A2B-2304-453C-B67E-91EF8353B196}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59651A2B-2304-453C-B67E-91EF8353B196}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59651A2B-2304-453C-B67E-91EF8353B196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85B7EA38-8F19-4199-B83A-B3128A145E3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85B7EA38-8F19-4199-B83A-B3128A145E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85B7EA38-8F19-4199-B83A-B3128A145E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85B7EA38-8F19-4199-B83A-B3128A145E3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{853143CB-5B00-49BC-ADF2-557269EB2235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853143CB-5B00-49BC-ADF2-557269EB2235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853143CB-5B00-49BC-ADF2-557269EB2235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853143CB-5B00-49BC-ADF2-557269EB2235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE6A6A6F-A0D3-428F-B70F-E73695DD2C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE6A6A6F-A0D3-428F-B70F-E73695DD2C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE6A6A6F-A0D3-428F-B70F-E73695DD2C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE6A6A6F-A0D3-428F-B70F-E73695DD2C91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A19A758-A68B-4B08-8F70-62D42A777926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A19A758-A68B-4B08-8F70-62D42A777926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A19A758-A68B-4B08-8F70-62D42A777926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A19A758-A68B-4B08-8F70-62D42A777926}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

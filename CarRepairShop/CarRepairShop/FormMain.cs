@@ -40,7 +40,7 @@ namespace CarRepairShop
                 if (list != null)
                 {
                     dataGridView.DataSource = list;
-                    dataGridView.Columns["ShipId"].Visible = false;
+                    dataGridView.Columns["CarId"].Visible = false;
                 }
                 _logger.LogInformation("Загрузка заказов");
             }
@@ -62,8 +62,8 @@ namespace CarRepairShop
 
         private void КораблиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var service = Program.ServiceProvider?.GetService(typeof(FormShips));
-            if (service is FormShips form)
+            var service = Program.ServiceProvider?.GetService(typeof(FormCars));
+            if (service is FormCars form)
             {
                 form.ShowDialog();
             }
@@ -87,7 +87,7 @@ namespace CarRepairShop
                 _logger.LogInformation("Заказ №{id}. Меняется статус на 'В работе'", id);
                 try
                 {
-                    var operationResult = _orderLogic.TakeOrderInWork(new OrderBindingModel { Id = id, Count = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["Count"].Value), Sum = double.Parse(dataGridView.SelectedRows[0].Cells["Sum"].Value.ToString()), Status = Enum.Parse<OrderStatus>(dataGridView.SelectedRows[0].Cells["Status"].Value.ToString()), ShipId = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["ShipId"].Value), ShipName = dataGridView.SelectedRows[0].Cells["ShipName"].Value.ToString(), DateCreate = DateTime.Parse(dataGridView.SelectedRows[0].Cells["DateCreate"].Value.ToString()), });
+                    var operationResult = _orderLogic.TakeOrderInWork(new OrderBindingModel { Id = id, Count = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["Count"].Value), Sum = double.Parse(dataGridView.SelectedRows[0].Cells["Sum"].Value.ToString()), Status = Enum.Parse<OrderStatus>(dataGridView.SelectedRows[0].Cells["Status"].Value.ToString()), CarId = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["CarId"].Value), CarName = dataGridView.SelectedRows[0].Cells["CarName"].Value.ToString(), DateCreate = DateTime.Parse(dataGridView.SelectedRows[0].Cells["DateCreate"].Value.ToString()), });
                     if (!operationResult)
                     {
                         throw new Exception("Ошибка при сохранении. Дополнительная информация в логах.");
@@ -111,7 +111,7 @@ namespace CarRepairShop
                 _logger.LogInformation("Заказ №{id}. Меняется статус на 'Готов'", id);
                 try
                 {
-                    var operationResult = _orderLogic.FinishOrder(new OrderBindingModel { Id = id, Count = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["Count"].Value), Sum = double.Parse(dataGridView.SelectedRows[0].Cells["Sum"].Value.ToString()), Status = Enum.Parse<OrderStatus>(dataGridView.SelectedRows[0].Cells["Status"].Value.ToString()), ShipId = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["ShipId"].Value), ShipName = dataGridView.SelectedRows[0].Cells["ShipName"].Value.ToString(), DateCreate = DateTime.Parse(dataGridView.SelectedRows[0].Cells["DateCreate"].Value.ToString()), });
+                    var operationResult = _orderLogic.FinishOrder(new OrderBindingModel { Id = id, Count = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["Count"].Value), Sum = double.Parse(dataGridView.SelectedRows[0].Cells["Sum"].Value.ToString()), Status = Enum.Parse<OrderStatus>(dataGridView.SelectedRows[0].Cells["Status"].Value.ToString()), CarId = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["CarId"].Value), CarName = dataGridView.SelectedRows[0].Cells["CarName"].Value.ToString(), DateCreate = DateTime.Parse(dataGridView.SelectedRows[0].Cells["DateCreate"].Value.ToString()), });
                     if (!operationResult)
                     {
                         throw new Exception("Ошибка при сохранении.Дополнительная информация в логах.");
@@ -134,7 +134,7 @@ namespace CarRepairShop
                 _logger.LogInformation("Заказ №{id}. Меняется статус на 'Выдан'", id);
                 try
                 {
-                    var operationResult = _orderLogic.DeliveryOrder(new OrderBindingModel { Id = id, Count = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["Count"].Value), Sum = double.Parse(dataGridView.SelectedRows[0].Cells["Sum"].Value.ToString()), Status = Enum.Parse<OrderStatus>(dataGridView.SelectedRows[0].Cells["Status"].Value.ToString()), ShipId = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["ShipId"].Value), ShipName = dataGridView.SelectedRows[0].Cells["ShipName"].Value.ToString(), DateCreate = DateTime.Parse(dataGridView.SelectedRows[0].Cells["DateCreate"].Value.ToString()), });
+                    var operationResult = _orderLogic.DeliveryOrder(new OrderBindingModel { Id = id, Count = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["Count"].Value), Sum = double.Parse(dataGridView.SelectedRows[0].Cells["Sum"].Value.ToString()), Status = Enum.Parse<OrderStatus>(dataGridView.SelectedRows[0].Cells["Status"].Value.ToString()), CarId = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["CarId"].Value), CarName = dataGridView.SelectedRows[0].Cells["CarName"].Value.ToString(), DateCreate = DateTime.Parse(dataGridView.SelectedRows[0].Cells["DateCreate"].Value.ToString()), });
                     if (!operationResult)
                     {
                         throw new Exception("Ошибка при сохранении. Дополнительная информация в логах.");
