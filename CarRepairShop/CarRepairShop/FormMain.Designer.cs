@@ -59,6 +59,7 @@
             this.ButtonCreateOrder.TabIndex = 1;
             this.ButtonCreateOrder.Text = "Создать заказ";
             this.ButtonCreateOrder.UseVisualStyleBackColor = true;
+            this.ButtonCreateOrder.Click += new System.EventHandler(this.ButtonCreateOrder_Click);
             // 
             // ButtonTakeOrderInWork
             // 
@@ -68,6 +69,7 @@
             this.ButtonTakeOrderInWork.TabIndex = 2;
             this.ButtonTakeOrderInWork.Text = "Отдать на выполнение";
             this.ButtonTakeOrderInWork.UseVisualStyleBackColor = true;
+            this.ButtonTakeOrderInWork.Click += new System.EventHandler(this.ButtonTakeOrderInWork_Click);
             // 
             // ButtonOrderReady
             // 
@@ -77,6 +79,7 @@
             this.ButtonOrderReady.TabIndex = 3;
             this.ButtonOrderReady.Text = "Заказ готов";
             this.ButtonOrderReady.UseVisualStyleBackColor = true;
+            this.ButtonOrderReady.Click += new System.EventHandler(this.ButtonOrderReady_Click);
             // 
             // ButtonIssuedOrder
             // 
@@ -86,6 +89,7 @@
             this.ButtonIssuedOrder.TabIndex = 4;
             this.ButtonIssuedOrder.Text = "Заказ выдан";
             this.ButtonIssuedOrder.UseVisualStyleBackColor = true;
+            this.ButtonIssuedOrder.Click += new System.EventHandler(this.ButtonIssuedOrder_Click);
             // 
             // ButtonRef
             // 
@@ -95,6 +99,7 @@
             this.ButtonRef.TabIndex = 5;
             this.ButtonRef.Text = "Обновить список";
             this.ButtonRef.UseVisualStyleBackColor = true;
+            this.ButtonRef.Click += new System.EventHandler(this.ButtonRef_Click);
             // 
             // menuStrip1
             // 
@@ -120,12 +125,14 @@
             this.ДеталиToolStripMenuItem.Name = "ДеталиToolStripMenuItem";
             this.ДеталиToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.ДеталиToolStripMenuItem.Text = "Детали";
+            this.ДеталиToolStripMenuItem.Click += new System.EventHandler(this.ДеталиToolStripMenuItem_Click);
             // 
             // МашиныToolStripMenuItem
             // 
             this.МашиныToolStripMenuItem.Name = "МашиныToolStripMenuItem";
             this.МашиныToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.МашиныToolStripMenuItem.Text = "Машины";
+            this.МашиныToolStripMenuItem.Click += new System.EventHandler(this.АвтомобилиToolStripMenuItem_Click);
             // 
             // FormMain
             // 

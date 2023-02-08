@@ -77,6 +77,7 @@
             this.ButtonSave.TabIndex = 4;
             this.ButtonSave.Text = "Сохранить";
             this.ButtonSave.UseVisualStyleBackColor = true;
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // ButtonCancel
             // 
@@ -86,6 +87,7 @@
             this.ButtonCancel.TabIndex = 5;
             this.ButtonCancel.Text = "Отмена";
             this.ButtonCancel.UseVisualStyleBackColor = true;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // FormCarDetail
             // 

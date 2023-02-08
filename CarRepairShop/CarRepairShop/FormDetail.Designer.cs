@@ -76,6 +76,7 @@
             this.ButtonSave.TabIndex = 4;
             this.ButtonSave.Text = "Сохранить";
             this.ButtonSave.UseVisualStyleBackColor = true;
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // ButtonCancel
             // 
@@ -85,6 +86,7 @@
             this.ButtonCancel.TabIndex = 5;
             this.ButtonCancel.Text = "Отмена";
             this.ButtonCancel.UseVisualStyleBackColor = true;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // FormDetail
             // 
@@ -99,6 +101,7 @@
             this.Controls.Add(this.textBoxName);
             this.Name = "FormDetail";
             this.Text = "Деталь";
+            this.Load += new System.EventHandler(this.FormDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

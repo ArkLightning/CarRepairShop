@@ -53,6 +53,7 @@
             this.ButtonAdd.TabIndex = 1;
             this.ButtonAdd.Text = "Добавить";
             this.ButtonAdd.UseVisualStyleBackColor = true;
+            this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
             // ButtonUpd
             // 
@@ -62,6 +63,7 @@
             this.ButtonUpd.TabIndex = 2;
             this.ButtonUpd.Text = "Изменить";
             this.ButtonUpd.UseVisualStyleBackColor = true;
+            this.ButtonUpd.Click += new System.EventHandler(this.ButtonUpd_Click);
             // 
             // ButtonDel
             // 
@@ -71,6 +73,7 @@
             this.ButtonDel.TabIndex = 3;
             this.ButtonDel.Text = "Удалить";
             this.ButtonDel.UseVisualStyleBackColor = true;
+            this.ButtonDel.Click += new System.EventHandler(this.ButtonDel_Click);
             // 
             // ButtonRef
             // 
@@ -80,6 +83,7 @@
             this.ButtonRef.TabIndex = 4;
             this.ButtonRef.Text = "Обновить";
             this.ButtonRef.UseVisualStyleBackColor = true;
+            this.ButtonRef.Click += new System.EventHandler(this.ButtonRef_Click);
             // 
             // FormDetails
             // 

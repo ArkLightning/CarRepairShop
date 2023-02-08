@@ -45,6 +45,7 @@
             this.ComboBoxCars.Name = "ComboBoxCars";
             this.ComboBoxCars.Size = new System.Drawing.Size(258, 23);
             this.ComboBoxCars.TabIndex = 0;
+            this.ComboBoxCars.SelectedIndexChanged += new System.EventHandler(this.ComboBoxCars_SelectedIndexChanged);
             // 
             // labelCar
             // 
@@ -79,6 +80,7 @@
             this.TextBoxCount.Name = "TextBoxCount";
             this.TextBoxCount.Size = new System.Drawing.Size(258, 23);
             this.TextBoxCount.TabIndex = 4;
+            this.TextBoxCount.TextChanged += new System.EventHandler(this.TextBoxCount_TextChanged);
             // 
             // TextBoxSum
             // 
@@ -95,6 +97,7 @@
             this.ButtonSave.TabIndex = 6;
             this.ButtonSave.Text = "Сохранить";
             this.ButtonSave.UseVisualStyleBackColor = true;
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // ButtonCancel
             // 
@@ -104,6 +107,7 @@
             this.ButtonCancel.TabIndex = 7;
             this.ButtonCancel.Text = "Отмена";
             this.ButtonCancel.UseVisualStyleBackColor = true;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // FormCreateOrder
             // 
@@ -120,6 +124,7 @@
             this.Controls.Add(this.ComboBoxCars);
             this.Name = "FormCreateOrder";
             this.Text = "Создание заказа";
+            this.Load += new System.EventHandler(this.FormCreateOrder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

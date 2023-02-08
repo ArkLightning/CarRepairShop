@@ -60,7 +60,7 @@ namespace CarRepairShop
             }
         }
 
-        private void КораблиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void АвтомобилиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var service = Program.ServiceProvider?.GetService(typeof(FormCars));
             if (service is FormCars form)
