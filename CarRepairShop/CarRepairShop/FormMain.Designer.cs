@@ -123,14 +123,14 @@
             // ДеталиToolStripMenuItem
             // 
             this.ДеталиToolStripMenuItem.Name = "ДеталиToolStripMenuItem";
-            this.ДеталиToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.ДеталиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ДеталиToolStripMenuItem.Text = "Детали";
             this.ДеталиToolStripMenuItem.Click += new System.EventHandler(this.ДеталиToolStripMenuItem_Click);
             // 
             // МашиныToolStripMenuItem
             // 
             this.МашиныToolStripMenuItem.Name = "МашиныToolStripMenuItem";
-            this.МашиныToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.МашиныToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.МашиныToolStripMenuItem.Text = "Машины";
             this.МашиныToolStripMenuItem.Click += new System.EventHandler(this.АвтомобилиToolStripMenuItem_Click);
             // 
@@ -149,6 +149,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
             this.Text = "Автомастерская";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

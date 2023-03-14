@@ -97,6 +97,7 @@
             this.Controls.Add(this.dataGridView);
             this.Name = "FormDetails";
             this.Text = "Детали";
+            this.Load += new System.EventHandler(this.FormDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 

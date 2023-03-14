@@ -177,6 +177,7 @@
             this.ButtonSave.TabIndex = 5;
             this.ButtonSave.Text = "Сохранить";
             this.ButtonSave.UseVisualStyleBackColor = true;
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // ButtonCancel
             // 
@@ -187,6 +188,7 @@
             this.ButtonCancel.TabIndex = 6;
             this.ButtonCancel.Text = "Отмена";
             this.ButtonCancel.UseVisualStyleBackColor = true;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // FormCar
             // 
@@ -202,6 +204,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCar";
             this.Text = "Автомобиль";
+            this.Load += new System.EventHandler(this.FormCar_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
