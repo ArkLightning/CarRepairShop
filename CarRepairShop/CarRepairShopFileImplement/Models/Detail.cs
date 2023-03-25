@@ -4,11 +4,10 @@ using CarRepairShopContracts.StoragesContracts;
 using CarRepairShopContracts.ViewModels;
 using CarRepairShopFileImplement.Models;
 using CarRepairShopDataModels.Models;
-using FoodOrdersFileImplement;
 using System.Xml.Linq;
 using CarRepairShopFileImplement;
 
-namespace FoodOrdersFileImplement.Models
+namespace CarRepairShopFileImplement.Models
 {
     public class Detail : IDetailModel
     {
