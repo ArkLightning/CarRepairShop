@@ -13,10 +13,10 @@ namespace CarRepairShopFileImplement
     internal class DataFileSingleton
     {
         private static DataFileSingleton? instance;
-        private readonly string CarFileName = "Component.xml";
+        private readonly string CarFileName = "Car.xml";
         private readonly string OrderFileName = "Order.xml";
         private readonly string DetailFileName = "Detail.xml";
-        public List<Component> Components { get; private set; }
+        public List<Car> Cars { get; private set; }
         public List<Order> Orders { get; private set; }
         public List<Detail> Details { get; private set; }
         public static DataFileSingleton GetInstance()
@@ -27,13 +27,13 @@ namespace CarRepairShopFileImplement
             }
             return instance;
         }
-        public void SaveComponents() => SaveData(Components, CarFileName, "Components", x => x.GetXElement);
-        public void SaveDishes() => SaveData(Details, DetailFileName, "Dishes", x => x.GetXElement);
+        public void SaveCars() => SaveData(Cars, CarFileName, "Cars", x => x.GetXElement);
+        public void SaveDetails() => SaveData(Details, DetailFileName, "Details", x => x.GetXElement);
         public void SaveOrders() => SaveData(Orders, OrderFileName, "Orders", x => x.GetXElement);
         private DataFileSingleton()
         {
-            Components = LoadData(CarFileName, "Component", x => Component.Create(x)!)!;
-            Details = LoadData(DetailFileName, "Dish", x => Detail.Create(x)!)!;
+            Cars = LoadData(CarFileName, "Car", x => Car.Create(x)!)!;
+            Details = LoadData(DetailFileName, "Detail", x => Detail.Create(x)!)!;
             Orders = LoadData(OrderFileName, "Order", x => Order.Create(x)!)!;
         }
         private static List<T>? LoadData<T>(string filename, string xmlNodeName, Func<XElement, T> selectFunction)

@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CarRepairShopContracts\CarRepairShopContracts.csproj" />
+    <ProjectReference Include="..\CarRepairShopDataModels\CarRepairShopDataModels.csproj" />
+  </ItemGroup>
+
 </Project>

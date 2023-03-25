@@ -1,4 +1,11 @@
-﻿using System;
+﻿using CarRepairShopContracts.BindingModels;
+using CarRepairShopContracts.SearchModels;
+using CarRepairShopContracts.StoragesContracts;
+using CarRepairShopContracts.ViewModels;
+using CarRepairShopFileImplement.Models;
+using CarRepairShopDataModels.Models;
+using CarRepairShopDataModels.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +17,7 @@ namespace CarRepairShopFileImplement.Models
     internal class Order : IOrderModel
     {
         public int Id { get; private set; }
-        public int DishId { get; private set; }
+        public int CarId { get; private set; }
         public int Count { get; private set; }
         public double Sum { get; private set; }
         public OrderStatus Status { get; private set; }
@@ -26,7 +33,7 @@ namespace CarRepairShopFileImplement.Models
             return new Order()
             {
                 Id = Convert.ToInt32(element.Attribute("Id")!.Value),
-                DishId = Convert.ToInt32(element.Element("DishId")!.Value),
+                CarId = Convert.ToInt32(element.Element("DishId")!.Value),
                 Sum = Convert.ToDouble(element.Element("Sum")!.Value),
                 Count = Convert.ToInt32(element.Element("Count")!.Value),
                 Status = (OrderStatus)Enum.Parse(typeof(OrderStatus), element.Element("Status")!.Value),
@@ -44,7 +51,7 @@ namespace CarRepairShopFileImplement.Models
             return new Order
             {
                 Id = model.Id,
-                DishId = model.DishId,
+                CarId = model.CarId,
                 Count = model.Count,
                 Sum = model.Sum,
                 Status = model.Status,
@@ -64,7 +71,7 @@ namespace CarRepairShopFileImplement.Models
         public OrderViewModel GetViewModel => new()
         {
             Id = Id,
-            DishId = DishId,
+            CarId = CarId,
             Count = Count,
             Sum = Sum,
             Status = Status,
@@ -75,7 +82,7 @@ namespace CarRepairShopFileImplement.Models
         public XElement GetXElement => new(
           "Order",
            new XAttribute("Id", Id),
-           new XElement("DishId", DishId.ToString()),
+           new XElement("DishId", CarId.ToString()),
            new XElement("Count", Count.ToString()),
            new XElement("Sum", Sum.ToString()),
            new XElement("Status", Status.ToString()),

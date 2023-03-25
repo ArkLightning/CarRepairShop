@@ -10,6 +10,6 @@ namespace CarRepairShopDataModels.Models
     {
         string CarName { get; }
         double Price { get; }
-        Dictionary<int, (IDetailModel, int)> CarDetails { get; }
+        //Dictionary<int, (IDetailModel, int)> CarDetails { get; }
     }
 }

@@ -15,5 +15,6 @@ namespace CarRepairShopContracts.ViewModels
         public string DetailName { get; set; } = string.Empty;
         [DisplayName("Цена")]
         public double Cost { get; set; }
+        public Dictionary<int, (ICarModel, int)> DetailComponents { get; set; } = new();
     }
 }

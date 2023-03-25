@@ -12,5 +12,6 @@ namespace CarRepairShopContracts.BindingModels
         public int Id { get; set; }
         public string DetailName { get; set; } = string.Empty;
         public double Cost { get; set; }
+        public Dictionary<int, (IDetailModel, int)> DetailComponents { get; set; } = new();
     }
 }

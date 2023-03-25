@@ -1,6 +1,9 @@
-﻿using CarRepairShopContracts.ViewModels;
+﻿using CarRepairShopContracts.BindingModels;
+using CarRepairShopContracts.SearchModels;
+using CarRepairShopContracts.StoragesContracts;
+using CarRepairShopContracts.ViewModels;
+using CarRepairShopFileImplement.Models;
 using CarRepairShopDataModels.Models;
-using CarRepairShopContracts.BindingModels;
 using System.Xml.Linq;
 
 namespace CarRepairShopFileImplement.Models
@@ -8,10 +11,10 @@ namespace CarRepairShopFileImplement.Models
     public class Car : ICarModel
     {
         public int Id { get; private set; }
-        public string ComponentName { get; private set; } = string.Empty;
-        public double Cost { get; set; }
+        public string CarName { get; private set; } = string.Empty;
+        public double Price { get; set; }
         public static Car? Create(CarBindingModel model)
-        {
+        { 
             if (model == null)
             {
                 return null;
@@ -19,8 +22,8 @@ namespace CarRepairShopFileImplement.Models
             return new Car()
             {
                 Id = model.Id,
-                ComponentName = model.ComponentName,
-                Cost = model.Cost
+                CarName = model.CarName,
+                Price = model.Price
             };
         }
         public static Car? Create(XElement element)
@@ -32,8 +35,8 @@ namespace CarRepairShopFileImplement.Models
             return new Car()
             {
                 Id = Convert.ToInt32(element.Attribute("Id")!.Value),
-                ComponentName = element.Element("ComponentName")!.Value,
-                Cost = Convert.ToDouble(element.Element("Cost")!.Value)
+                CarName = element.Element("ComponentName")!.Value,
+                Price= Convert.ToDouble(element.Element("Cost")!.Value)
             };
         }
         public void Update(CarBindingModel model)
@@ -42,20 +45,20 @@ namespace CarRepairShopFileImplement.Models
             {
                 return;
             }
-            ComponentName = model.ComponentName;
-            Cost = model.Cost;
+            CarName = model.CarName;
+            Price = model.Price;
         }
         public CarViewModel GetViewModel => new()
         {
             Id = Id,
-            ComponentName = ComponentName,
-            Cost = Cost
+            CarName = CarName,
+            Price = Price
         };
         public XElement GetXElement => new(
             "Component",
             new XAttribute("Id", Id),
-            new XElement("ComponentName", ComponentName),
-            new XElement("Cost", Cost.ToString())
+            new XElement("CartName", CarName),
+            new XElement("Cost", Price.ToString())
         );
     }
 }
