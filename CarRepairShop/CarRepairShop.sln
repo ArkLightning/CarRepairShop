@@ -16,7 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRepairShopContracts", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRepairShopListImplement", "CarRepairShopListImplement\CarRepairShopListImplement.csproj", "{7A19A758-A68B-4B08-8F70-62D42A777926}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRepairShopFileImplement", "CarRepairShopFileImplement\CarRepairShopFileImplement.csproj", "{5B6F8AFD-D465-4D71-A381-9ED66B40A1D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRepairShopFileImplement", "CarRepairShopFileImplement\CarRepairShopFileImplement.csproj", "{5B6F8AFD-D465-4D71-A381-9ED66B40A1D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRepairShopDatabaseImplement", "CarRepairShopDatabaseImplement\CarRepairShopDatabaseImplement.csproj", "{680EC086-C5D7-4827-820A-4610675A0E79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +50,10 @@ Global
 		{5B6F8AFD-D465-4D71-A381-9ED66B40A1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B6F8AFD-D465-4D71-A381-9ED66B40A1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B6F8AFD-D465-4D71-A381-9ED66B40A1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680EC086-C5D7-4827-820A-4610675A0E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680EC086-C5D7-4827-820A-4610675A0E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680EC086-C5D7-4827-820A-4610675A0E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680EC086-C5D7-4827-820A-4610675A0E79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
