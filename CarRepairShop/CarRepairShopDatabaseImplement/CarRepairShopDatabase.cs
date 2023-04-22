@@ -16,7 +16,7 @@ namespace CarRepairShopDatabaseImplement
         {
             if (optionsBuilder.IsConfigured == false)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-SINQU55\SQLEXPRESS;Initial Catalog=FoodOrdersDatabase;Integrated Security=True;MultipleActiveResultSets=True;;TrustServerCertificate=True");
+                optionsBuilder.UseNpgsql(@"Host = localhost; Port = 5432; Database = CarRepairShop; Username = postgres; Password = 1");
             }
             base.OnConfiguring(optionsBuilder);
         }
@@ -25,7 +25,7 @@ namespace CarRepairShopDatabaseImplement
 
         public virtual DbSet<Detail> Details { set; get; }
 
-        public virtual DbSet<DetailComponent> DetailComponents { set; get; }
+        public virtual DbSet<CarDetail> DetailComponents { set; get; }
 
         public virtual DbSet<Order> Orders { set; get; }
     }

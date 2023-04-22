@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace CarRepairShopFileImplement.Implements
 {
-    internal class CarStorage : ICarStorage
+    public class CarStorage : ICarStorage
     {
         private readonly DataFileSingleton _source;
         public CarStorage()

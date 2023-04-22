@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CarRepairShopBisinessLogic\CarRepairShopBisinessLogic.csproj" />
+    <ProjectReference Include="..\CarRepairShopDatabaseImplement\CarRepairShopDatabaseImplement.csproj" />
+    <ProjectReference Include="..\CarRepairShopFileImplement\CarRepairShopFileImplement.csproj" />
     <ProjectReference Include="..\CarRepairShopListImplement\CarRepairShopListImplement.csproj" />
   </ItemGroup>
 

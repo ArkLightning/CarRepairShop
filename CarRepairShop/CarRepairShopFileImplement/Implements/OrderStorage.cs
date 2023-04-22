@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CarRepairShopFileImplement.Implements
 {
-    internal class OrderStorage : IOrderStorage
+    public class OrderStorage : IOrderStorage
     {
         private readonly DataFileSingleton _source;
         public OrderStorage()

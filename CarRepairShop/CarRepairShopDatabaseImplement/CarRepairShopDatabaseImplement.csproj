@@ -9,11 +9,15 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CarRepairShopBisinessLogic\CarRepairShopBisinessLogic.csproj" />
     <ProjectReference Include="..\CarRepairShopContracts\CarRepairShopContracts.csproj" />
     <ProjectReference Include="..\CarRepairShopDataModels\CarRepairShopDataModels.csproj" />
+    <ProjectReference Include="..\CarRepairShopFileImplement\CarRepairShopFileImplement.csproj" />
+    <ProjectReference Include="..\CarRepairShopListImplement\CarRepairShopListImplement.csproj" />
   </ItemGroup>
 
 </Project>

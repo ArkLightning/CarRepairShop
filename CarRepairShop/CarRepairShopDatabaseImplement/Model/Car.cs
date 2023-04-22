@@ -21,9 +21,10 @@ namespace CarRepairShopDatabaseImplement.Model
 
         [Required]
         public double Price { get; set; }
+        private Dictionary<int, (IDetailModel, int)>? _carDetails = null;
 
-        [ForeignKey("ComponentId")]
-        public virtual List<Detail> DishComponents { get; set; } = new();
+        //[ForeignKey("DetailId")]
+        public virtual List<Detail> DetailComponents { get; set; } = new();
 
         public static Car? Create(CarBindingModel model)
         {
@@ -65,5 +66,37 @@ namespace CarRepairShopDatabaseImplement.Model
             CarName = CarName,
             Price = Price
         };
+
+        public void UpdateDetails(CarRepairShopDatabase context,
+       CarBindingModel model)
+        {
+            var carDetails = context.DetailComponents.Where(rec =>
+           rec.CarId == model.Id).ToList();
+            if (carDetails != null && carDetails.Count > 0)
+            { // удалили те, которых нет в модели
+                context.DetailComponents.RemoveRange(carDetails.Where(rec
+               => !model.CarDetails.ContainsKey(rec.CarId)));
+                context.SaveChanges();
+                // обновили количество у существующих записей
+                foreach (var updateDetail in carDetails)
+                {
+                    updateDetail.Count = model.CarDetails[updateDetail.CarId].Item2;
+                    model.CarDetails.Remove(updateDetail.CarId);
+                }
+                context.SaveChanges();
+            }
+            var car = context.Cars.First(x => x.Id == Id);
+            foreach (var pc in model.CarDetails)
+            {
+                context.DetailComponents.Add(new CarDetail
+                {
+                    Car = car,
+                    Detail = context.Details.First(x => x.Id == pc.Key),
+                    Count = pc.Value.Item2
+                });
+                context.SaveChanges();
+            }
+            _carDetails = null;
+        }
     }
 }

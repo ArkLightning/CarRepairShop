@@ -35,7 +35,7 @@ namespace CarRepairShopFileImplement.Models
             return new Car()
             {
                 Id = Convert.ToInt32(element.Attribute("Id")!.Value),
-                CarName = element.Element("ComponentName")!.Value,
+                CarName = element.Element("CarName")!.Value,
                 Price= Convert.ToDouble(element.Element("Cost")!.Value)
             };
         }
@@ -55,9 +55,9 @@ namespace CarRepairShopFileImplement.Models
             Price = Price
         };
         public XElement GetXElement => new(
-            "Component",
+            "Car",
             new XAttribute("Id", Id),
-            new XElement("CartName", CarName),
+            new XElement("CarName", CarName),
             new XElement("Cost", Price.ToString())
         );
     }

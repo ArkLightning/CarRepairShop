@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CarRepairShopFileImplement.Implements
 {
-    internal class DetailStorage : IDetailStorage
+    public class DetailStorage : IDetailStorage
     {
         private readonly DataFileSingleton _source;
         public DetailStorage()

@@ -41,6 +41,7 @@ namespace CarRepairShop
                 {
                     dataGridView.DataSource = list;
                     dataGridView.Columns["CarId"].Visible = false;
+                    dataGridView.Columns["CarName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
                 _logger.LogInformation("Загрузка заказов");
             }

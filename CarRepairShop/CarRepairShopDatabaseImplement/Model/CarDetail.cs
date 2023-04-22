@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace CarRepairShopDatabaseImplement.Model
 {
-    internal class DetailComponent
+    internal class CarDetail
     {
         public int Id { get; set; }
 
         [Required]
-        public int DetailId { get; set; }
+        public int CarId { get; set; }
 
         [Required]
-        public int ComponentId { get; set; }
+        public int DetialId { get; set; }
 
         [Required]
         public int Count { get; set; }
